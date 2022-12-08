@@ -14,6 +14,6 @@ async function countDown(i) {
 function timeCountdown() {
     let counter = countDown(document.querySelector('#time').value);
     counter.then((msg) => {
-        document.querySelector('#time-countdown').innerHTML = msg
+        document.querySelector('time-countdown').innerHTML = msg
     });
 }

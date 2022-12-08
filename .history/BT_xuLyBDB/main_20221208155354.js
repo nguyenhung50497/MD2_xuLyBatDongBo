@@ -4,7 +4,7 @@ function sleep(ms) {
 
 async function countDown(i) {
     while (i > 0) {
-        document.querySelector('#time-countdown').innerHTML = i;
+        document.querySelector('#result').innerHTML = i;
         i--;
         await sleep(1000);
     }
@@ -12,8 +12,8 @@ async function countDown(i) {
 }
 
 function timeCountdown() {
-    let counter = countDown(document.querySelector('#time').value);
+    let counter = countDown(document.querySelector('#money').value);
     counter.then((msg) => {
-        document.querySelector('#time-countdown').innerHTML = msg
+        document.querySelector('#result').innerHTML = msg
     });
 }
